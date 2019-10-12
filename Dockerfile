@@ -1,7 +1,11 @@
 FROM ubuntu
 
-COPY linux-config /root/linux-config
+COPY linux-config /root/oh-my-ubuntu/linux-config
+COPY startup-scripts /root/oh-my-ubuntu/startup-scripts
 
-RUN /root/linux-config/ubuntu-setup.sh
+# The startup script will perform first-run configuration 
+# and run a shell in a loop to prevent accidental shutdown of the container.
 
-CMD ["/usr/bin/zsh"]
+WORKDIR /root/
+
+ENTRYPOINT ["/root/oh-my-ubuntu/startup-scripts/startup"]

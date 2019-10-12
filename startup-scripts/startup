@@ -1,0 +1,33 @@
+#!/bin/bash
+
+OMU=/root/oh-my-ubuntu
+
+# oh-my-ubuntu/
+#  (first-run-complete.flag)
+#  startup-scripts/
+#    startup
+#    first-run
+#  linux-config/
+#    ...
+#    ubuntu-setup.sh
+
+if [ ! -f $OMU/first-run-complete.flag ]; then
+  echo "oh-my-ubuntu: first-run scripts starting"
+  $OMU/startup-scripts/first-run
+  echo "oh-my-ubuntu: first-run scripts done"
+  echo "oh-my-ubuntu first run" >> $OMU/first-run-complete.flag
+  date >> $OMU/first-run-complete.flag
+fi
+
+echo "oh-my-ubuntu: starting"
+
+while : ; do
+  zsh
+  if [ -f /shutdown.flag ]; then
+    rm /shutdown.flag
+    echo "oh-my-ubuntu: exiting via /shutdown.flag"
+    exit
+  fi
+  echo "oh-my-ubuntu: main shell terminated, respawning. To detach from container, press ^P^Q. To exit shell loop `touch /shutdown.flag` file and exit main shell again."
+done
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+OMU=/root/oh-my-ubuntu
+
+$OMU/linux-config/ubuntu-setup.sh
