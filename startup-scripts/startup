@@ -7,6 +7,7 @@ OMU=/root/oh-my-ubuntu
 #  startup-scripts/
 #    startup
 #    first-run
+#    shell
 #  linux-config/
 #    ...
 #    ubuntu-setup.sh
@@ -29,5 +30,6 @@ while : ; do
     exit
   fi
   echo "oh-my-ubuntu: main shell terminated, respawning. To detach from container, press ^P^Q. To exit shell loop, touch /shutdown.flag file and exit main shell again."
+  sleep 1
 done
 
