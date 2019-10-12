@@ -6,4 +6,4 @@ RUN apt update && \
     (cd ~/setup/ && git clone https://github.com/sebimoe/linux-config.git linux-config) && \
     (cd ~/setup/linux-config/ && ./ubuntu-setup.sh)
 
-CMD ["bash"]
+CMD ["zsh"]
