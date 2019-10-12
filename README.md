@@ -21,9 +21,11 @@ This image is intended to be used as an interactive virtual environment, potenti
 
 ### start a new container
 
-    docker run -it --name myubuntu sebimoe/oh-my-zsh
+    docker run -it --name myubuntu -v /docker/myubuntu:/data sebimoe/oh-my-ubuntu
 
 The image will perform package installation and configuration on the first run.
+
+Volume specified with `-v` is completely optional, it affords persistent and host-shared data store.
 
 
 ### detach from the container
