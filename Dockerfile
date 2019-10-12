@@ -1,9 +1,7 @@
 FROM ubuntu
 
-RUN apt update && \
-    apt install -y git && \
-    mkdir ~/setup && \
-    (cd ~/setup/ && git clone https://github.com/sebimoe/linux-config.git linux-config) && \
-    (cd ~/setup/linux-config/ && ./ubuntu-setup.sh)
+COPY linux-config /root/linux-config
 
-CMD ["zsh"]
+RUN /root/linux-config/ubuntu-setup.sh
+
+CMD ["/usr/bin/zsh"]

@@ -1,0 +1,3 @@
+[submodule "linux-config"]
+	path = linux-config
+	url = git@github.com:sebimoe/linux-config.git
