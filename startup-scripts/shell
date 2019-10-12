@@ -1,0 +1,13 @@
+#!/bin/bash
+
+which zsh
+if [ "$?" -eq "0" ]; then
+  zsh
+  exit $?
+else
+  echo "oh-my-ubuntu: zsh not found, running bash"
+  bash
+  exit $?
+fi
+
+

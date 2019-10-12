@@ -2,4 +2,6 @@
 
 OMU=/root/oh-my-ubuntu
 
-$OMU/linux-config/ubuntu-setup.sh
+cd $OMU/linux-config
+
+./ubuntu-setup.sh

@@ -22,12 +22,12 @@ fi
 echo "oh-my-ubuntu: starting"
 
 while : ; do
-  zsh
+  $OMU/startup-scripts/shell
   if [ -f /shutdown.flag ]; then
     rm /shutdown.flag
     echo "oh-my-ubuntu: exiting via /shutdown.flag"
     exit
   fi
-  echo "oh-my-ubuntu: main shell terminated, respawning. To detach from container, press ^P^Q. To exit shell loop `touch /shutdown.flag` file and exit main shell again."
+  echo "oh-my-ubuntu: main shell terminated, respawning. To detach from container, press ^P^Q. To exit shell loop, touch /shutdown.flag file and exit main shell again."
 done
 
