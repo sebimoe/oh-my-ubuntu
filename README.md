@@ -3,7 +3,7 @@
   - [sebimoe/linux-config](https://github.com/sebimoe/linux-config)
 
 
-# oh-my-ubuntu
+# sebimoe/oh-my-ubuntu
 
 Ubuntu docker image for interactive use. 
 
