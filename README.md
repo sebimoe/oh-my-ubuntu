@@ -16,6 +16,11 @@ Ubuntu docker image for interactive use.
 This image is intended to be used as an interactive virtual environment, potentially used with long-running background services.
 
 
+## pre-built packages
+
+Packages are available at dockerhub at [`sebimoe/oh-my-ubuntu:latest`](https://hub.docker.com/r/sebimoe/oh-my-ubuntu) and github [`docker.pkg.github.com/sebimoe/oh-my-ubuntu/oh-my-ubuntu:VERSION`](https://github.com/sebimoe/oh-my-ubuntu/packages).
+
+
 ## usage
 
 
